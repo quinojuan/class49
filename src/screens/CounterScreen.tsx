@@ -16,6 +16,7 @@ export const CounterScreen = () => {
 
       <Fab 
         title="-1"
+        position='bl'
         onPress={ () => setContador( contador - 1 ) }
       />
     </View>
@@ -28,6 +29,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
+    color: "white",
     textAlign: 'center',
     fontSize: 40,
     top: 10,
