@@ -1,4 +1,11 @@
-import { StyleSheet, Text, TouchableNativeFeedback, TouchableOpacity, View } from 'react-native';
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  TouchableNativeFeedback,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
 interface Props {
   title: string;
@@ -7,23 +14,37 @@ interface Props {
 }
 
 export const Fab = ({ title, onPress, position = 'br' }: Props) => {
-  return (
-    <View 
+  const ios = () => {
+    <TouchableOpacity
+      activeOpacity={ 0.8 }
       style={[
         styles.fabLocation,
         position === 'br' ? styles.right : styles.left,
-      ]}
-    >
-    <TouchableNativeFeedback
-        onPress={onPress}
-        background={ TouchableNativeFeedback.Ripple("#FFD59F", false, 30) }
-        >
-        <View style={styles.fab}>
-          <Text style={styles.fabText}>{title}</Text>
-        </View>
-      </TouchableNativeFeedback>
-    </View>
-  );
+      ]}>
+      <View style={styles.fab}>
+        <Text style={styles.fabText}>{title}</Text>
+      </View>
+    </TouchableOpacity>;
+  };
+  const android = () => {
+    return (
+      <View
+        style={[
+          styles.fabLocation,
+          position === 'br' ? styles.right : styles.left,
+        ]}>
+        <TouchableNativeFeedback
+          onPress={onPress}
+          background={TouchableNativeFeedback.Ripple('#FFD59F', false, 30)}>
+          <View style={styles.fab}>
+            <Text style={styles.fabText}>{title}</Text>
+          </View>
+        </TouchableNativeFeedback>
+      </View>
+    );
+  };
+
+  return Platform.OS === 'ios' ? ios() : android();
 };
 
 const styles = StyleSheet.create({
@@ -33,15 +54,15 @@ const styles = StyleSheet.create({
     height: 60,
     borderRadius: 50,
     justifyContent: 'center',
-    shadowColor: "#FF7F00",
-shadowOffset: {
-	width: 0,
-	height: 4,
-},
-shadowOpacity: 0.32,
-shadowRadius: 5.46,
+    shadowColor: '#FF7F00',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
 
-elevation: 3,
+    elevation: 3,
   },
   fabText: {
     color: 'white',
