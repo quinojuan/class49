@@ -15,16 +15,19 @@ interface Props {
 
 export const Fab = ({ title, onPress, position = 'br' }: Props) => {
   const ios = () => {
-    <TouchableOpacity
-      activeOpacity={ 0.8 }
-      style={[
-        styles.fabLocation,
-        position === 'br' ? styles.right : styles.left,
-      ]}>
-      <View style={styles.fab}>
-        <Text style={styles.fabText}>{title}</Text>
-      </View>
-    </TouchableOpacity>;
+    return (
+      <TouchableOpacity
+        onPress={onPress}
+        activeOpacity={0.8}
+        style={[
+          styles.fabLocation,
+          position === 'br' ? styles.right : styles.left,
+        ]}>
+        <View style={styles.fab}>
+          <Text style={styles.fabText}>{title}</Text>
+        </View>
+      </TouchableOpacity>
+    );
   };
   const android = () => {
     return (
