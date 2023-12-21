@@ -16,10 +16,11 @@ export const FlexScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
     backgroundColor: 'violet',
-    justifyContent: 'space-evenly',
-
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end'
+// justifyContent:     
   },
   caja1: {
     // flex: 5, // 5 + 3 + 2 = 10 (así que 5 es la mitad del total o sea, el 50%)
