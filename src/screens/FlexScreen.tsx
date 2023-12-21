@@ -16,32 +16,30 @@ export const FlexScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'row',
     backgroundColor: 'violet',
-    flexDirection: 'row'
+    justifyContent: 'space-evenly',
+
   },
   caja1: {
     // flex: 5, // 5 + 3 + 2 = 10 (así que 5 es la mitad del total o sea, el 50%)
-    flex: 1,
     borderWidth: 2,
-    borderColor: "white",
-    backgroundColor: "#f0a23b",
-    fontSize: 30
+    borderColor: 'white',
+    backgroundColor: '#f0a23b',
+    fontSize: 30,
   },
   caja2: {
     // flex: 3,
-    flex: 1,
     borderWidth: 2,
-    backgroundColor: "#5856d6",
-    borderColor: "white",
-    fontSize: 30
+    backgroundColor: '#5856d6',
+    borderColor: 'white',
+    fontSize: 30,
   },
   caja3: {
     // flex: 2,
-    flex: 1,
     borderWidth: 2,
-    backgroundColor: "#28c4d9",
-    borderColor: "white",
-    fontSize: 30
+    backgroundColor: '#28c4d9',
+    borderColor: 'white',
+    fontSize: 30,
   },
-  
 });
