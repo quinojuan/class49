@@ -15,27 +15,27 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#284258',
-    justifyContent: 'space-between',
-    flexDirection: 'row'
-    },
+  },
   cajaMorada: {
-    width: 100,
-    height: "100%",
+    flex: 1,
+    width: '100%',
+    height: 100,
     borderWidth: 10,
     borderColor: 'white',
     backgroundColor: '#5856D6',
   },
   cajaNaranja: {
-    width: 100,
-    height: "100%",
+    flex: 1,
+    width: '100%',
+    height: 100,
     borderWidth: 10,
     borderColor: 'white',
     backgroundColor: '#f0a23b',
-    
   },
   cajaAzul: {
-    width: 100,
-    height: "100%",
+    flex: 2,
+    width: '100%',
+    height: 100,
     borderWidth: 10,
     borderColor: 'white',
     backgroundColor: 'blue',
