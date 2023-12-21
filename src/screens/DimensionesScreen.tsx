@@ -9,7 +9,9 @@ export const DimensionesScreen = () => {
   return (
     <View>
       <View style={styles.container}>
-        <View style={styles.cajaMorada} />
+        <View style={{
+          ...styles.cajaMorada,
+          width: width * 0.5}} />
         <View style={styles.cajaNaranja} />
       </View>
       <Text>
@@ -22,12 +24,12 @@ export const DimensionesScreen = () => {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    height: 600,
+    height: 300,
     backgroundColor: 'brown',
   },
   cajaMorada: {
     backgroundColor: '#5856d6',
-    width: '50%',
+    // width: '50%',
     height: '50%',
   },
   cajaNaranja: {
