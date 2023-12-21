@@ -24,6 +24,7 @@ height: 100,
 borderWidth: 10,
 borderColor: 'white',
 backgroundColor: '#5856D6',
+bottom: -100
 },
 cajaNaranja: {
     width: 100,
