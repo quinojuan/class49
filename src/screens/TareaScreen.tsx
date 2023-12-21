@@ -15,7 +15,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#284258',
-    justifyContent: 'center'
+    justifyContent: 'space-between',
+    alignItems: 'center'
     },
   cajaMorada: {
     width: 100,
@@ -39,6 +40,6 @@ const styles = StyleSheet.create({
     borderWidth: 10,
     borderColor: 'white',
     backgroundColor: 'blue',
-    alignSelf: 'center'
+    alignSelf: 'flex-start'
   },
 });
