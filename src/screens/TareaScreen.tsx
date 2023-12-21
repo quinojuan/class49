@@ -31,6 +31,7 @@ cajaNaranja: {
     borderWidth: 10,
     borderColor: 'white',
     backgroundColor: '#f0a23b',
+    left: 100
     
   },
   cajaAzul: {
