@@ -16,13 +16,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#284258',
     justifyContent: 'center'
-  },
+    },
   cajaMorada: {
     width: 100,
     height: 100,
     borderWidth: 10,
     borderColor: 'white',
     backgroundColor: '#5856D6',
+    alignSelf: 'flex-end'
   },
   cajaNaranja: {
     width: 100,
@@ -30,12 +31,14 @@ const styles = StyleSheet.create({
     borderWidth: 10,
     borderColor: 'white',
     backgroundColor: '#f0a23b',
+    
   },
   cajaAzul: {
-    width: "100%",
+    width: 100,
     height: 100,
     borderWidth: 10,
     borderColor: 'white',
-    backgroundColor: 'blue'
+    backgroundColor: 'blue',
+    alignSelf: 'center'
   },
 });
