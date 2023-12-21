@@ -17,10 +17,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'violet',
-    flexDirection: 'row',
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end'
-// justifyContent:     
+    flexDirection: 'row'
   },
   caja1: {
     // flex: 5, // 5 + 3 + 2 = 10 (así que 5 es la mitad del total o sea, el 50%)
@@ -28,6 +25,7 @@ const styles = StyleSheet.create({
     borderColor: 'white',
     backgroundColor: '#f0a23b',
     fontSize: 30,
+    alignSelf: 'flex-start'
   },
   caja2: {
     // flex: 3,
@@ -35,6 +33,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#5856d6',
     borderColor: 'white',
     fontSize: 30,
+    alignSelf: 'center'
   },
   caja3: {
     // flex: 2,
@@ -42,5 +41,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#28c4d9',
     borderColor: 'white',
     fontSize: 30,
+    alignSelf: 'flex-end'
   },
 });
